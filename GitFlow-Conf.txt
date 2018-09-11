@@ -7,8 +7,8 @@ git config --global push.default current
 #muestra los comandos nativos de git al ejecutar comandos gitflow
 git config --global gitflow.showcommands true
 
-#ruta a los hooks de gitflow
-git config --global gitflow.path.hooks \\SCOBGITCCS002\GitHooks
+#ruta a los hooks de gitflow cambiar el nombre del servidor por el correspondiente y descomentar
+#git config --global gitflow.path.hooks \\SERVERNAME\GitHooks
 
 #nombre clave para las ramas remotas
 git config --global gitflow.origin origin
