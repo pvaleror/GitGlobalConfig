@@ -1,0 +1,89 @@
+#comando alias de la intruccion “log”
+git config --global alias.adog "log --all --decorate --oneline --graph"
+
+#realiza la instrucción push solo sobre la rama actual 
+git config --global push.default current
+
+#muestra los comandos nativos de git al ejecutar comandos gitflow
+git config --global gitflow.showcommands true
+
+#ruta a los hooks de gitflow
+git config --global gitflow.path.hooks \\SCOBGITCCS002\GitHooks
+
+#nombre clave para las ramas remotas
+git config --global gitflow.origin origin
+
+#incializar git flow de manera silenciosa
+git config --global gitflow.init.defaults true
+
+#prefijos de las ramas
+git config --global gitflow.branch.master PROD
+git config --global gitflow.branch.develop PRUE
+
+git config --global gitflow.prefix.feature DESA-
+git config --global gitflow.prefix.release DEMO-
+git config --global gitflow.prefix.bugfix BUG-
+git config --global gitflow.prefix.hotfix INCI-
+git config --global gitflow.prefix.support SPT-
+git config --global gitflow.prefix.versiontag V-
+
+#configuracion de comandos que afectan la rama bugfix
+git config --global gitflow.bugfix.start.fetch true
+git config --global gitflow.bugfix.finish.fetch true
+git config --global gitflow.bugfix.finish.rebase true
+git config --global gitflow.bugfix.finish.push true
+git config --global gitflow.bugfix.finish.keepremote false
+git config --global gitflow.bugfix.finish.keeplocal false
+git config --global gitflow.bugfix.finish.no-ff false
+git config --global gitflow.bugfix.finish.preserve-merges false
+git config --global gitflow.bugfix.rebase.interactive false
+git config --global gitflow.bugfix.rebase.preserve-merges false
+git config --global gitflow.bugfix.delete.force false
+git config --global gitflow.bugfix.delete.remote true
+##configuracion de comandos que afectan la rama feature (DESARROLLO)
+git config --global gitflow.feature.start.fetch true
+git config --global gitflow.feature.finish.fetch true
+git config --global gitflow.feature.finish.rebase true
+git config --global gitflow.feature.finish.preserve-merges false
+git config --global gitflow.feature.finish.push true
+git config --global gitflow.feature.finish.keepremote false
+git config --global gitflow.feature.finish.keeplocal false
+git config --global gitflow.feature.finish.no-ff false
+git config --global gitflow.feature.rebase.interactive false
+git config --global gitflow.feature.rebase.preserve-merges false
+git config --global gitflow.feature.delete.force false
+git config --global gitflow.feature.delete.remote true
+
+#configuracion de comandos que afectan la rama hotfix
+git config --global gitflow.hotfix.start.fetch true
+git config --global gitflow.hotfix.rebase.interactive false
+git config --global gitflow.hotfix.rebase.preserve-merges false
+git config --global gitflow.hotfix.finish.fetch true
+git config --global gitflow.hotfix.finish.push true
+git config --global gitflow.hotfix.finish.keepremote false
+git config --global gitflow.hotfix.finish.keeplocal false
+git config --global gitflow.hotfix.delete.force false
+git config --global gitflow.hotfix.finish.remote true
+
+#configuracion de comandos que afectan la rama release (DEMO)
+git config --global gitflow.release.start.fetch true
+git config --global gitflow.release.finish.fetch true
+git config --global gitflow.release.finish.push true
+git config --global gitflow.release.finish.pushproduction true
+git config --global gitflow.release.finish.pushdevelop true
+git config --global gitflow.release.finish.keepremote false
+git config --global gitflow.release.finish.keeplocal false
+#No se reintegran los cambios realizados en release a developement (PRUE)
+git config --global gitflow.release.finish.nobackmerge true
+git config --global gitflow.release.branch.fetch true
+git config --global gitflow.release.finish.ff-master true
+git config --global gitflow.release.branch.push true
+git config --global gitflow.release.rebase.interactive false
+git config --global gitflow.release.rebase.preserve-merges false
+git config --global gitflow.release.delete.fetch true
+git config --global gitflow.release.delete.remote true
+
+#configuracion de comandos que afectan la rama support
+git config --global gitflow.support.start.fetch true
+git config --global gitflow.support.rebase.interactive false
+git config --global gitflow.support.rebase.preserve-merges false
